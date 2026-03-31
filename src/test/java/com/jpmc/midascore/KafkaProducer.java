@@ -2,11 +2,13 @@ package com.jpmc.midascore;
 
 import com.jpmc.midascore.foundation.Transaction;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KafkaProducer {
+public class KafkaProducer{
     private final String topic;
     private final KafkaTemplate<String, Transaction> kafkaTemplate;
 
